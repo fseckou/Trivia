@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/berkshire_swash"
+        android:text="@string/trivia"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="406dp"
+
+        android:layout_height="199dp"
+        android:layout_marginTop="224dp"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="7dp"
+        app:contentPadding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title">
+
+        <TextView
+            android:id="@+id/txtQuestion"
+            android:layout_width="382dp"
+            android:layout_height="178dp"
+            android:gravity="center_vertical" />
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btnTrue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="8dp"
+        android:background="#E91E63"
+        android:text="True"
+        app:layout_constraintEnd_toStartOf="@+id/btnFalse"
+        app:layout_constraintStart_toEndOf="@+id/btnPrev"
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+    <ImageButton
+        android:id="@+id/btnPrev"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="8dp"
+        android:background="#E91E63"
+        app:layout_constraintEnd_toStartOf="@+id/btnTrue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        app:srcCompat="@android:drawable/ic_media_previous" />
+
+    <Button
+        android:id="@+id/btnFalse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="84dp"
+        android:layout_marginEnd="8dp"
+        android:background="#E91E63"
+        android:text="Fasle"
+        app:layout_constraintEnd_toStartOf="@+id/btnNext"
+        app:layout_constraintStart_toEndOf="@+id/btnTrue"
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+    <ImageButton
+        android:id="@+id/btnNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="8dp"
+        android:background="#E91E63"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnFalse"
+        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        app:srcCompat="@android:drawable/ic_media_next" />
+
+    <TextView
+        android:id="@+id/txtCounter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="332dp"
+        android:layout_marginEnd="58dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/cardView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txtScore"
+        android:layout_width="199dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="254dp"
+        android:layout_marginEnd="192dp"
+        android:layout_marginBottom="19dp"
+        app:layout_constraintBottom_toTopOf="@+id/cardView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtHighScore"
+        android:layout_width="199dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="164dp"
+        android:layout_marginEnd="192dp"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
